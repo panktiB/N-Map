@@ -16,28 +16,26 @@
 	  <div id="searchbox">
 	  	<input type="text" name="search" placeholder="Search..">
 	  </div>
-	  <!--Change this code later-->
-	  <a href="#">About</a>
-	  <a href="#">Services</a>
-	  <a href="#">Clients</a>
-	  <a href="#">Contact</a>
+	  <ul class="list" data-bind="foreach: locations">
+	  	<li class="loc" data-bind="text: title"></li>
+	  </ul>
 	</div>
-	<div id="main"
+	<div id="main">
 		<h2>Bars in Mumbai</h2>
 		<p>Click on the button below to open the side navigation menu.</p>
 		<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
 
 		<div id="map">
-			MAP SHOULD APPEAR !!!
-			<script type="text/javascript">console.log(3456);</script>
 		</div>
 
 	</div> 
 	
 	<script src="js/lib/jquery.js"></script>
+	<script src="js/lib/knockout-3.4.2.js"></script>
 	<script src="js/sidebar.js"></script>
-	<script async defer src="https://maps.googleapis.com/maps/api/js?&key=AIzaSyASL0ymuQtO8BHsMj5sO7CowpaKGQiLBi0&callback=initMap"></script>
+	<script src="js/app.js"></script>
 	<script src="js/map.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?&key=AIzaSyASL0ymuQtO8BHsMj5sO7CowpaKGQiLBi0&callback=initMap"></script>
 
 </body>
 </html>
