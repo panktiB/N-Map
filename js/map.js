@@ -86,11 +86,10 @@ function initMap() {
 	var defaultIcon = makeMarkerIcon('800000');
 	var highlightedIcon = makeMarkerIcon('FFFF24');
 
-	var barList = viewModel.locations; 
-	for(var i = 0; i < barList.length; i++) {
+	for(var i = 0; i < barLoc.length; i++) {
 
-		var position = {lat: barList[i].lat, lng: barList[i].lng};
-		var title = barList[i].title;
+		var position = { lat: barLoc[i].lat, lng: barLoc[i].lng };
+		var title = barLoc[i].title;
 		var marker = new google.maps.Marker({
 			position: position,
 			map: map,
